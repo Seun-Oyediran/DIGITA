@@ -8,7 +8,8 @@
 :root{
     --POPPINS: 'Poppins', sans-serif;
     --ROBOTO: 'Roboto', sans-serif;
-    --PRIMARY_COLOR: #35ab39;
+    /* --PRIMARY_COLOR: #35ab39; */
+    --PRIMARY_COLOR: #6C63FF;
     --TRANSITION: all 0.3s ease;
 }
 
@@ -17,7 +18,7 @@
 body{
     background-color: #f3f3f3;
     font-family: 'Roboto', sans-serif;
-    font-size: 22px;
+    font-size: 16px;
     color: #696969;
     font-weight: 300;
     line-height: 30px;
@@ -75,7 +76,7 @@ a{
     opacity: 0;
     top: auto;
     left: 0;
-    display: flex;
+    /* display: flex; */
     min-height: 100vh;
     align-items: center;
     background-color: #fff;
@@ -108,6 +109,7 @@ section{
     width: 100%;
     background-color: white;
     flex-direction: column;
+    overflow-y: auto;
 }
 
 /* END OF PAGE TRANSITION STYLES */
@@ -215,13 +217,13 @@ nav .hamburger{
 #nav a span{
     /* padding: 10px 5px; */
     display: inline-block;
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 300;
     color: #696969;
 }
 
 #nav a i{
-    font-size: 22px;
+    font-size: 18px;
     color: #b3b3b3;;
 }
 
@@ -248,13 +250,18 @@ nav .hamburger{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-direction: column;
+    padding-top: 1rem;
 }
 .middle-logo img{
     max-width: 300px;
     height: auto;
 }
 
+.middle-logo h1{
+    font-family: var(--ROBOTO);
+    font-size: 1.5rem;
+}
 
 
 
@@ -264,13 +271,15 @@ nav .hamburger{
     }
     .site-nav{
         width: 0;
+        /* margin-top: 80px; */
+        justify-content: center;
     }
     .nav-active{
         width: 90px;
     }
     section{
         padding-left: 0;
-        padding-top: 90px;
+        padding-top: 80px;
         position: relative ;
         /* display: block !important;
         width: 100%;
@@ -284,6 +293,14 @@ nav .hamburger{
     .site-nav .logo-con{
         display: none;
     }
+    .middle-logo img{
+        max-width: 250px;
+    }
+
+    .middle-logo h1{
+        font-size: 1.2rem;
+    }
+    
 }
 
 
@@ -292,5 +309,16 @@ nav .hamburger{
 @media screen and (max-width: 500px){
     nav{
         height: 50px;
+    }
+    
+    #nav a span{
+        font-size: 12px;
+    }
+    .middle-logo img{
+        max-width: 200px;
+        height: auto;
+    }
+    .middle-logo h1{
+        font-size: 1rem;
     }
 }

@@ -1,21 +1,34 @@
 /* HOME PAGE STYLING */
-#home .container{
+#home .container > div{
     display: flex;
-    /* height: 100%; */
     justify-content: center;
     align-items: center;
     flex: 1;
+    padding: 2rem 0;
 }
 
 #home .text-content{
     order: 1;
     align-self: center;
     flex: 1;
+    margin: 0 30px;
+    text-align: center;
+
 }
+
+#home .middle .text-content{
+    order: 2;
+}
+
 #home .img-con{
     order: 2;
-    flex: 2;
+    flex: 1;
     overflow: hidden;
+    margin: 0 30px;
+}
+
+#home .middle .img-con{
+    order: 1;
 }
 
 #home .img-con img{
@@ -24,30 +37,72 @@
     height: auto;
 }
 
-#home h1{
-    font-size: 80px;
-    line-height: 90px;
-    font-weight: 600;
-    margin-bottom: 1.25rem;
-    font-family: var(--POPPINS);
+#home .text-content h1{
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-family: var(--ROBOTO);
+    font-weight: 300;
+    
 }
 
+#home .text-content h1 > span{
+    display: inline-block;
+    border-bottom: 3px solid #eaeaea;
+    padding: .5rem;
+}
+
+
+
 #home p{
+    font-size: 16px;
     color: #696969;
-    word-spacing: 2px;
-    background-color: white;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+
+.btn-con{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: .75rem 0;
+}
+.btn{
+    background-color: rgb(108,99,255);
+    padding: 8px 25px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    color: white !important;
+    transition: all 0.3s ease 0s;
+}
+
+.btn:hover{
+    box-shadow: 0px 15px 20px rgba(108,99,255, 0.4);
+    transform: translateY(-0.25rem);
 }
 /* END OF HOME PAGE STYLING */
 
 
 
 
-@media screen and (max-width: 1000px){
-    #home .container{
+@media screen and (max-width: 900px){
+    #home .container > div{
         display: block;
     }
     #home .text-content .img-con{
         display: none;
+    }
+    #home .text-content{
+        margin: 0 0px;
+        padding: 0.3rem 2rem;
+    }
+    #home .img-con{
+        margin: 0 0px;
+        padding: 0 2rem;
+    }
+    #home p{
+        max-width: 600px;
+        margin: 0 auto;
     }
 }
 
@@ -55,5 +110,13 @@
     #home p{
         font-size: 16px;
         word-spacing: 1px;
+    }
+    #home .text-content{
+        margin: 0;
+        padding: 0.3rem 0;
+    }
+    #home .img-con{
+        margin: 0;
+        padding: 0;
     }
 }

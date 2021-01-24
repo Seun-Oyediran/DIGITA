@@ -1,0 +1,77 @@
+#moreInfo > .container {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+#moreInfo .container > div{
+    flex: 1;
+}
+#moreInfo h1{
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-family: var(--ROBOTO);
+    font-weight: 300;
+}
+
+#moreInfo .why-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-gap: 2rem;
+    padding: 0 2rem;
+}
+
+#moreInfo .why-grid > div{
+    box-shadow: 0px 0px 8px 1px rgba(145, 140, 145, 0.35);
+    padding: 30px 25px;
+    border-radius: 10px;
+    text-align: left;
+    background-color: #fff;
+    transition: all 0.3s ease 0s;
+}
+
+#moreInfo .why-grid > div:hover{
+    box-shadow: 0px 0px 8px 1px rgba(145, 140, 145, 0.35), 0px 0px 8px 1px rgba(145, 140, 145, 0.35); 
+}
+
+#moreInfo .why-grid h4{
+    line-height: 1.2;
+    font-weight: 500;
+    font-family: var(--POPPINS);
+    color: #3e3939;
+    font-size: 1.25rem;
+    margin: 1.5rem 0 .8rem;
+}
+
+#moreInfo .why-grid p{
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #696969;
+    font-weight: 300;
+    line-height: 25px;
+    font-family: var(--ROBOTO);
+    letter-spacing: .5px;
+}
+
+#moreInfo .why-grid span{
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: var(--PRIMARY_COLOR);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 23px;
+}
+
+@media screen and (max-width: 1000px){
+    #moreInfo > .container {
+        display: block;
+    }
+
+
+}
