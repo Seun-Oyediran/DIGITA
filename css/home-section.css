@@ -1,0 +1,59 @@
+/* HOME PAGE STYLING */
+#home .container{
+    display: flex;
+    /* height: 100%; */
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+#home .text-content{
+    order: 1;
+    align-self: center;
+    flex: 1;
+}
+#home .img-con{
+    order: 2;
+    flex: 2;
+    overflow: hidden;
+}
+
+#home .img-con img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#home h1{
+    font-size: 80px;
+    line-height: 90px;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    font-family: var(--POPPINS);
+}
+
+#home p{
+    color: #696969;
+    word-spacing: 2px;
+    background-color: white;
+}
+/* END OF HOME PAGE STYLING */
+
+
+
+
+@media screen and (max-width: 1000px){
+    #home .container{
+        display: block;
+    }
+    #home .text-content .img-con{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px){
+    #home p{
+        font-size: 16px;
+        word-spacing: 1px;
+    }
+}

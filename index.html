@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+    <!-- END OF GOOGLE FONTS -->
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="/css/page-animation.css">
+    <link rel="stylesheet" href="/css/floating-images.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/home-section.css">
+</head>
+
+<body>
+    <div class="site-nav">
+        <!-- COMPANY LOGO DIV -->
+        <div class="logo-con">
+            <img src="/images/digitaLogo.jpeg" alt="logo">
+        </div>
+
+
+        <!-- Main menu -->
+        <ul class="site-main-menu alt-font" id="nav">
+            <li ><!-- href value = data-id without # of .pt-page. Data-goto is the number of section -->
+                <a class="pt-trigger " data-animation="58" data-goto="1" href="#home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a class="pt-trigger" data-animation="59" data-goto="2" href="#about">
+                    <i class="far fa-user-circle"></i>
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a class="pt-trigger" data-animation="61" data-goto="3" href="#services">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Services</span></a>
+            </li>
+            <li>
+                <a class="pt-trigger" data-animation="59" data-goto="4" href="#portfolio">
+                    <i class="far fa-file-alt"></i>
+                    <span>Portfolio</span>
+                </a>
+            </li>
+            <li>
+                <a class="pt-trigger" data-animation="58" data-goto="5" href="#clients">
+                    <i class="far fa-smile"></i>
+                    <span>Client</span>
+                </a>
+            </li>
+            <li>
+                <a class="pt-trigger" data-animation="61" data-goto="6" href="#contact">
+                    <i class="far fa-address-card"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+        <!-- /Main menu -->
+
+    </div>
+     <!-- NAV BAR FOR SMALLER SCREENS -->
+    <nav>
+        <div class="img-con">
+            <img src="/images/digitaLogo.jpeg" alt="logo">
+        </div>
+        <div class="hamburger" id="sidemenu_toggle">
+            <i class="fas fa-bars fa-2x"></i>
+        </div>
+    </nav>
+
+     <!-- END OF NAV BAR -->
+
+
+    <!-- CONTAINER FOR THE SECTIONS -->
+    <div class="main-left" id="main">
+        <div class="pt-wrapper">
+            <div class="subpages">
+                <!-- FIRST SECTION (HOME SECTION) -->
+                <section id="home" class="pt-page pt-page-1" data-id="home">
+                    <div class="middle-logo">
+                        <img src="/images/longLogo.png" alt="home image">
+                     
+                    </div>
+                    <!-- <div class="floating-container">
+                        <div class="inner-container">
+                            <div class="shape">
+                               
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="container">
+                        
+                        
+                        <div class="img-con">
+                            <img src="/images/undraw_mobile_interface_wakp.png" alt="home image">
+                         
+                        </div>
+                        <div class="text-content">
+                            <!-- <h1>Digita</h1> -->
+                            <div class="img-con">
+                                <img src="/images/longLogo.png" alt="logo">
+                            </div>
+                            <p>There are many variations of passages of Lorem Ipsum is at the available, but the majority have suffered alteration some form, by injected humour randomised words at the available.</p>
+                        </div>
+                    </div>
+                    
+                </section>
+                <!-- END OF FIRST SECTION -->
+
+                <section id="about" class="pt-page pt-page-2" data-id="about"><p>page 2</p></section>
+                <section id="services" class="pt-page pt-page-3" data-id="services"><p>page 3</p></section>
+                <section id="portfolio" class="pt-page pt-page-4" data-id="portfolio"><p>page 4</p></section>
+                <section id="clients" class="pt-page pt-page-5" data-id="clients"><p>page 5</p></section>
+                <section id="contact" class="pt-page pt-page-6" data-id="contact"><p>page 1</p></section>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="./js/page-transition.js"></script>
+    <script>
+        $(document).ready(function() {
+
+        var html = '';
+        for (var i = 1; i <= 50; i ++) {
+            html += '<div class="shape-container--'+i+' shape-animation"><div class="random-shape"></div></div>';
+        }
+        
+        document.querySelector('.shape').innerHTML += html;
+
+        var $allShapes = $("[class*='shape-container--']");
+        }); 
+    </script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
