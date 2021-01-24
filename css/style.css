@@ -134,6 +134,7 @@ nav{
     transition: var(--TRANSITION);
 }
 nav img{
+    padding-top: 10px;
     max-width: 90px;
 }
 
@@ -267,7 +268,7 @@ nav .hamburger{
 
 @media screen and (max-width: 1000px){
     nav{
-        height: 80px;
+        height: 60px;
     }
     .site-nav{
         width: 0;
