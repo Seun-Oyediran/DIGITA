@@ -8,7 +8,9 @@
 	 display: block;
      overflow: hidden;
      position: absolute;
-     top: 0;
+	 top: 0;
+	 /* z-index: -2; */
+	 opacity: 0.4;
      left: 0;
 	 /* background-image: url(http://kontramax.com/wp-content/uploads/temp/Background.jpg); */
 }
