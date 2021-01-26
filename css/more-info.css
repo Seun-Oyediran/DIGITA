@@ -5,7 +5,7 @@
 }
 #moreInfo .container > div{
     flex: 1;
-    padding: 3rem 0;
+    padding: 0rem 0;
 }
 #moreInfo h1{
     text-align: center;
@@ -110,6 +110,4 @@
     #moreInfo > .container {
         display: block;
     }
-
-
 }

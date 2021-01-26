@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Digita</title>
 
     <!-- GOOGLE FONTS -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -12,11 +12,20 @@
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 
+    <!-- MAP BOX CDN -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- END OF MAP BOX -->
+
+
+    
     <link rel="stylesheet" href="/css/page-animation.css">
     <link rel="stylesheet" href="/css/floating-images.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/home-section.css">
     <link rel="stylesheet" href="/css/more-info.css">
+    <link rel="stylesheet" href="/css/contact-section.css">
+    <link rel="stylesheet" href="/css/waves.css">
 </head>
 
 <body>
@@ -42,23 +51,7 @@
                     <span>More Info</span>
                 </a>
             </li>
-            <!-- <li>
-                <a class="pt-trigger" data-animation="61" data-goto="3" href="#services">
-                    <i class="fas fa-briefcase"></i>
-                    <span>Services</span></a>
-            </li>
-            <li>
-                <a class="pt-trigger" data-animation="59" data-goto="4" href="#portfolio">
-                    <i class="far fa-file-alt"></i>
-                    <span>Portfolio</span>
-                </a>
-            </li>
-            <li>
-                <a class="pt-trigger" data-animation="58" data-goto="5" href="#clients">
-                    <i class="far fa-smile"></i>
-                    <span>Client</span>
-                </a>
-            </li> -->
+           
             <li>
                 <a class="pt-trigger" data-animation="61" data-goto="3" href="#contact">
                     <i class="far fa-address-card"></i>
@@ -67,7 +60,18 @@
             </li>
         </ul>
         <!-- /Main menu -->
-
+        <div class="social">
+            <a href="https://twitter.com/skrrrr_skrr">
+                <span>
+                    <i class="fab fa-twitter"></i>
+                </span>
+            </a>
+            <a href="https://wa.me/+2348139303378">
+                <span class="whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </span>
+            </a>
+        </div>
     </div>
      <!-- NAV BAR FOR SMALLER SCREENS -->
     <nav>
@@ -93,13 +97,7 @@
                         <img src="/images/longLogo.png" alt="home image">
                         <h1>Sound & secure</h1>
                     </div>
-                    <!-- <div class="floating-container">
-                        <div class="inner-container">
-                            <div class="shape">
-                               
-                            </div>
-                        </div>
-                    </div> -->
+                   
                     <div class="container"> 
 
                         <div>
@@ -215,23 +213,83 @@
                 </section>
                 <!-- END OF SECOND SECTION -->
 
-                <!-- <section id="services" class="pt-page pt-page-3" data-id="services"><p>page 3</p></section>
-                <section id="portfolio" class="pt-page pt-page-4" data-id="portfolio"><p>page 4</p></section>
-                <section id="clients" class="pt-page pt-page-5" data-id="clients"><p>page 5</p></section> -->
-                <section id="contact" class="pt-page pt-page-3" data-id="contact"><p>page contact</p></section>
+            
+                <section id="contact" class="pt-page pt-page-3" data-id="contact">
+                    <div class="container">
+                        <h2>Join us as we revolutionise digital payments</h2>
+                        <div>
+                            <div class="contact-form">
+                            
+                                <form>
+                                    <div class="input">
+                                        <input type="text" name="name" placeholder="Name">
+                                    </div>
+                                    <div class="input">
+                                        <input type="email" name="email" placeholder="Email">
+                                    </div>
+                                    <div class="input textarea-box">
+                                        <textarea name="message" placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="submit-btn">
+                                        <button disabled >Send Message</button>
+                                    </div>
+                                </form>
+                                <div class="address">
+                                    <div>
+                                        <i class="far fa-building fa-2x"></i>
+                                        <div class="text">
+                                            <h6>Address</h6>
+                                            <p>Come visit us: 24, somewhere, Ilorin, Nigeria</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <i class="far fa-envelope fa-2x"></i>
+                                        <div class="text">
+                                            <h6>Email</h6>
+                                            <p>digitasound@gmail.com</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-phone-alt fa-2x"></i>
+                                        <div class="text">
+                                            <h6>Phone</h6>
+                                            <p>+2348139303378</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="map">
+                                <h5>* Please make sure your Location is ON*</h5>
+                                <p><span></span> Our location</p>
+                                <p>Press the button at the top right corner of the map to get your location</p>
+                                <div id="map"></div>
+                            </div>
+                        </div>
+                        </div>
+                        
+                </section>
             </div>
         </div>
     </div>
 
 
-    <div class="floating-container">
+    <div class="floating-container"> 
         <div class="inner-container">
             <div class="shape">
                
             </div>
         </div>
     </div>
-   
+    <div class="sound-waves">
+        <div class="lds-ripple"><div></div><div></div></div>
+    </div>
+
+    <div class="loader">
+        <img src="/images/longLogo.png" alt="welcome logo">
+        <h2>Sound & Secure</h2>
+        <div class="lds-ripple"><div></div><div></div></div>
+    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js" integrity="sha512-9DDJWj17gkdeGHU0Zr76wc9jY2g0IwE7ZCIxakVYKyzlTiOWZDZJOTaVgAzNo+LB7+EbGXxwCXkOP+a5rgkuqQ==" crossorigin="anonymous"></script>
@@ -250,7 +308,7 @@
         var $allShapes = $("[class*='shape-container--']");
         }); 
     </script>
-    
+    <script src="/js/mapbox.js"></script>
     <script src="/js/main.js"></script>
 </body>
 </html>

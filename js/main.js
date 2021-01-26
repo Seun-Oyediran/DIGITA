@@ -3,11 +3,16 @@ gsap.registerPlugin(ScrollToPlugin);
 const btn = document.querySelectorAll('.btn')
 const middle = document.querySelector('.middle')
 
+gsap.to('.loader', 2, {opacity: 0, ease: 'slow', delay: 3, display: 'none'})
+
+
 $("#sidemenu_toggle").on("click", function () {
     $(".site-nav").toggleClass("nav-active");
 }),$(".site-nav li a").on("click", function () {
     $(".site-nav").removeClass("active");
+    $(".site-nav").removeClass("nav-active");
 });
+
 
 
 btn.forEach((item, index)=>{
